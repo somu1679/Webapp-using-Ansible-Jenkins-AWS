@@ -1,7 +1,6 @@
 # Pull base image 
-FROM tomcat:9.0 
+FROM tomcat:8-jre8 
 
 # Maintainer 
-MAINTAINER "siddharthasinghbisen96@gmail.com"
-RUN /bin/sh -c cd /var/lib/jenkins/workspace/webapp/webapp/target
-RUN cp webapp.war /usr/local/tomcat/webapp.war
+MAINTAINER "siddharthasinghbisen96@gmail.com" 
+COPY ./webapp.war /usr/local/tomcat/webapps
